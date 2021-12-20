@@ -1,0 +1,349 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+@import "modules/header";
+@import "modules/footer";
+@import "modules/wraper";
+@import "modules/spare-parts.scss";
+@import "modules/contacts.scss";
+@import "modules/about-company.scss";
+@import "modules/equipment-parts.scss";
+@import "modules/services.scss";
+
+
+html {
+    line-height: $mainLineHeight;
+    font-size: $mainFontSize;
+    color: $mainFontColor;
+    height: 100%;
+    background: initial !important;
+
+    @media screen and (max-width: $desktopWidth) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+        font-size: 15px;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        font-size: 14px;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: $mainFontSize;
+    font-weight: normal;
+    background-color: #f9f9fb;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.8rem;
+    position: relative;
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: $default-color;
+
+    &:hover {
+        text-decoration: none !important;
+    }
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+button,
+input,
+select,
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border-bottom: 1px solid $green-color;
+    -webkit-text-fill-color: $second-color;
+    -webkit-box-shadow: 0 0 0px 0px #000 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+section,
+.section {
+    position: relative;
+
+    @media screen and (max-width: $desktopWidth) {
+        padding: 36px 0;
+    }
+
+    @media screen and (max-width: $desktopWidth) {
+        padding: 28px 0;
+    }
+
+    @media screen and (max-width: $desktopWidth) {
+        padding: 20px 0;
+    }
+}
+
+
+.container {
+    width: 96%;
+    max-width: 1220px;
+    margin: 0 auto;
+
+    @media screen and (max-width: $smDesktopWidth) {
+        max-width: tableWidth;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+        max-width: phoneWidth;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        width: 90%;
+    }
+}
+
+.button {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    //background: linear-gradient(92.09deg, #0B62E9 1.77%, #123E93 100%);
+    border-radius: 10px;
+    color: $second-color;
+    padding: 0.75rem 1.5625rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+
+    &:hover {
+        box-shadow: 0 0 10px 1px #7BE25D;
+    }
+
+    &:active {
+        background: #5A9D2C;
+    }
+
+    :focus {
+        background: #5A9D2C;
+    }
+}
+
+.button-order {
+    display: block;
+    background: #f0f1f3;
+    border-radius: 7px;
+    padding: 12px 35px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: linear-gradient(0deg, #4c8a2d, #7be25d);
+        color: $second-color;
+    }
+}
+
+.button-detailed {
+    display: block;
+    background: #f0f1f3;
+    border-radius: 7px;
+    padding: 12px 35px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: linear-gradient(0deg, #4c8a2d, #7be25d);
+        color: $second-color;
+    }
+}
+
+.button-more {
+    display: none;
+    text-align: center;
+    cursor: pointer;
+    padding-bottom: 6.4rem;
+
+    p {
+        font-size: 1.1429rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+}
+
+.titles-text {
+    position: relative;
+
+    .title-transparent {
+        position: absolute;
+        bottom: 8px;
+        left: -8px;
+        font-size: 70px;
+        font-weight: 600;
+        color: transparent;
+        white-space: nowrap;
+        -webkit-text-stroke: 1px rgba(41, 41, 41, 0.1);
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        line-height: 1;
+    }
+
+    .title {
+        position: relative;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 52px;
+    }
+}
+
+.spare-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 60px 0 60px 0;
+
+    .title {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 40px;
+    }
+}
+
+.active_cards {
+    display: block !important;
+}
+
+.hidden,
+.hidden_2 {
+    display: none !important;
+}
+
+
+
+
+/*Будет верно для маниторов у которых ширина 0-1920*/
+@media screen and (max-width: 1920px) {}
+
+/* 1369 - 1600 px */
+@media screen and (max-width: 1600px) {}
+
+/* 961 - 1368 px */
+@media screen and (max-width: 1368px) {}
+
+/* 769 - 960 px */
+@media screen and (max-width: 960px) {}
+
+/* 481 - 768 px */
+@media screen and (max-width: 768px) {
+    .titles-text {
+        .title-transparent {
+            bottom: 51px;
+        }
+
+        .title {
+            font-size: 42px;
+            line-height: 45px;
+        }
+    }
+
+    .button-order {
+        padding: 10px 20px;
+    }
+}
+
+/* 320 - 480 px */
+@media screen and (max-width: 480px) {
+    .titles-text {
+        .title {
+            font-size: 38px;
+        }
+    }
+
+    .spare-title {
+        .title {
+            font-size: 30px;
+        }
+    }
+
+    .button {
+        padding: 15px 20px;
+    }
+
+    .button-order {
+        padding: 10px 33px;
+    }
+
+    .button-more {
+        display: block;
+    }
+}
+
+//Iphone5
+@media screen and (max-width: 330px) {
+    .titles-text {
+        .title-transparent {
+            font-size: 60px;
+        }
+
+        .title {
+            font-size: 32px;
+        }
+    }
+
+    .button-order {
+        padding: 7px 19px;
+    }
+}
+
+// Modules
+// @import "modules/my-module.scss";
