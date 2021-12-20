@@ -68,6 +68,12 @@
         .header__phone {
             display: flex;
 
+            .header__phone__content {
+                display: flex;
+                flex-direction: column;
+                margin-right: 33px;
+            }
+
             .phone__info {
                 display: flex;
                 align-items: center;
@@ -476,22 +482,32 @@
     .header {
         .header__menu {
 
-            .header__address,
-            .header__phone-short,
-            .header__phone,
-            .header__button {
-                display: none;
+            .header__phone {
+
+                .under__text {
+                    display: none;
+                }
+
+                .phone__info {
+                    flex-direction: column;
+                    align-items: flex-end;
+
+                    .tel {
+                        padding-left: 0;
+                    }
+
+                    .phone-icon {
+                        width: 20px;
+                    }
+                }
             }
-        }
 
-        .header__menu-btn {
-            display: flex;
-            justify-content: flex-end;
-            width: 100%;
-        }
-
-        .menu-btn {
-            display: block;
+            .header__button {
+                .button {
+                    font-size: 0.8rem;
+                    padding: 0.55rem 0.4rem
+                }
+            }
         }
 
         .header__bottom {
@@ -501,16 +517,10 @@
             .header__bottom--menu {
                 padding: 0;
 
-                .header__search {
-                    width: 100%;
-
-                    input {
-                        width: 100%;
-                    }
-                }
-
                 .bottom__menu {
-                    display: none;
+                    ul li a {
+                        font-size: 1rem;
+                    }
                 }
             }
         }
@@ -520,10 +530,44 @@
 /* 481 - 768 px */
 @media screen and (max-width: 768px) {
     .header {
+
+        .header__menu {
+            .header__logo {
+                width: 50%;
+            }
+
+            .header__phone {
+                flex-direction: row-reverse;
+
+                .header__phone__content {
+                    margin-right: 0;
+                }
+
+                .phone__info {
+                    .phone-icon {
+                        width: 12px;
+                    }
+
+                    .tel {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+
+
         .header__bottom {
-            .title {
-                padding-bottom: 2.7rem;
-                line-height: 3.5rem;
+            .header__bottom--menu {
+                .bottom__menu {
+                    ul {
+                        gap: 25px;
+
+                        li a {
+                            font-size: 14px;
+                        }
+                    }
+                }
             }
         }
     }

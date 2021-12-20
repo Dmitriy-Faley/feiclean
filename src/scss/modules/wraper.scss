@@ -1,5 +1,47 @@
+.header__form {
+    form {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 10px 5px #E4E3E3;
+        border-radius: 10px;
+
+        .form__input {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 25px 25px 15px;
+
+            input {
+                width: 437px;
+                height: 71px;
+                background: #FFFFFF;
+                border: 3px solid #00A3D5;
+                box-sizing: border-box;
+                border-radius: 10px;
+                text-align: center;
+            }
+
+            .button {
+                width: auto;
+            }
+        }
+
+        .form__text {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-bottom: 15px;
+
+            img {
+                width: 26px;
+                height: 26px;
+            }
+        }
+    }
+}
+
 .sale {
-    min-height: 640px;
+    min-height: 695px;
     //overflow: hidden;
     position: relative;
     width: 100%;
@@ -61,7 +103,7 @@
             font-size: 4rem;
             font-weight: 600;
             line-height: 4.875rem;
-            padding-bottom: 2.5rem;
+            padding-bottom: 0.75rem;
             display: flex;
             flex-direction: column;
         }
@@ -70,10 +112,10 @@
             color: $default-color;
             font-weight: 500;
             font-size: 24px;
-            padding-bottom: 3.875rem;
+            padding-bottom: 1.875rem;
         }
 
-        .button{
+        .button {
             text-align: left;
             margin-right: auto;
             background-color: $green-color;
