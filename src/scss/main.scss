@@ -152,7 +152,9 @@ section,
 
 .button {
     display: block;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    background: $green-color;
     //background: linear-gradient(92.09deg, #0B62E9 1.77%, #123E93 100%);
     border-radius: 10px;
     color: $second-color;
@@ -176,16 +178,16 @@ section,
 
 .button-order {
     display: block;
-    background: #f0f1f3;
-    border-radius: 7px;
-    padding: 12px 35px;
-    font-size: 18px;
+    background: $blue-color;
+    border-radius: 10px;
+    padding: 21px 92px;
+    font-size: 24px;
     font-weight: 500;
+    color: $second-color;
     transition: all 0.3s ease;
 
     &:hover {
-        background: linear-gradient(0deg, #4c8a2d, #7be25d);
-        color: $second-color;
+        background: $green-color;
     }
 }
 
@@ -217,47 +219,16 @@ section,
     }
 }
 
-.titles-text {
-    position: relative;
 
-    .title-transparent {
-        position: absolute;
-        bottom: 8px;
-        left: -8px;
-        font-size: 70px;
-        font-weight: 600;
-        color: transparent;
-        white-space: nowrap;
-        -webkit-text-stroke: 1px rgba(41, 41, 41, 0.1);
-        width: 100%;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        line-height: 1;
-    }
-
-    .title {
-        position: relative;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 48px;
-        font-weight: 600;
-        line-height: 52px;
-    }
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 52px;
+    text-align: center;
+    padding-bottom: 50px;
 }
 
-.spare-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 60px 0 60px 0;
-
-    .title {
-        font-weight: bold;
-        font-size: 40px;
-        line-height: 40px;
-    }
-}
 
 .active_cards {
     display: block !important;
@@ -296,9 +267,7 @@ section,
         }
     }
 
-    .button-order {
-        padding: 10px 20px;
-    }
+    
 }
 
 /* 320 - 480 px */
@@ -320,7 +289,7 @@ section,
     }
 
     .button-order {
-        padding: 10px 33px;
+        padding: 20px 70px;
     }
 
     .button-more {
@@ -338,10 +307,6 @@ section,
         .title {
             font-size: 32px;
         }
-    }
-
-    .button-order {
-        padding: 7px 19px;
     }
 }
 
