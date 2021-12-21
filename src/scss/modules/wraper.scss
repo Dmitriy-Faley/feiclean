@@ -304,13 +304,14 @@
 
         .mark {
             position: absolute;
-            top: 0;
             z-index: 99;
+
+            >div {}
 
             p {
                 font-family: 'Roboto', sans-serif;
                 font-size: 20px;
-                font-weight: normal;
+                font-weight: 300;
                 line-height: 23px;
                 text-align: center;
             }
@@ -327,6 +328,52 @@
                 border-radius: 50px;
                 width: 100px;
                 height: 100px;
+            }
+
+            .mark__line {
+                position: absolute;
+            }
+
+            &:nth-child(1) {
+                top: 22%;
+                left: 20%;
+
+                p {
+                    margin-bottom: 25px;
+                    width: 190px;
+                }
+
+                .mark__line {
+                    top: 73%;
+                }
+            }
+
+            &:nth-child(2) {
+                top: 22%;
+                right: 30%;
+
+                p {
+                    margin-bottom: 15px;
+                    width: 250px;
+                }
+
+                .mark__line {
+                    top: 73%;
+                }
+            }
+        }
+    }
+}
+
+
+.why-us{
+    .why-us__content{
+        .item{
+            >div{
+                &:first-child{
+                    display: flex;
+                    align-items: center;
+                }
             }
         }
     }
