@@ -357,6 +357,11 @@
                     width: 250px;
                 }
 
+                .mark__number{
+                    position: absolute;
+                    right: 0;
+                }
+
                 .mark__line {
                     top: 73%;
                 }
@@ -366,14 +371,41 @@
 }
 
 
-.why-us{
-    .why-us__content{
-        .item{
-            >div{
-                &:first-child{
+.why-us {
+    padding-bottom: 9rem;
+
+    .why-us__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 4rem;
+
+        .item {
+            width: 460px;
+
+            >div {
+                &:first-child {
                     display: flex;
                     align-items: center;
+                    margin-bottom: 10px;
                 }
+            }
+
+            .item__title {
+                color: $default-color;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+                font-size: 2.125rem;
+                padding-left: 1.25rem;
+            }
+
+            .item__desk {
+                color: rgba(59, 57, 73, 0.7);
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.5rem;
+                font-weight: 400;
+                line-height: 1.75rem;
             }
         }
     }
