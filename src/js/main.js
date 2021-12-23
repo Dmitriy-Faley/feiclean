@@ -70,157 +70,30 @@ $(document).ready(function () {
 
     });
 
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        //cssMode: true,
-        //mousewheel: true,
-        //keyboard: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        speed: 800,
-        autoplay: {
-            delay: 4500,
-            disableOnInteraction: false,
-        },
-        breakpoints: {
-            500: {
-                direction: "vertical",
-            },
-            480: {
-                direction: "horizontal",
-            }
-        }
-    });
-
-
-    var swiper = new Swiper(".clients__slider", {
-        slidesPerView: 3,
-        //spaceBetween: 30,
-        slidesPerGroup: 3,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        speed: 800,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-
-        breakpoints: {
-
-            960: {
-                //setWrapperSize:true,
-                slidesPerView: 3,
-            },
-            580: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-            },
-            320: {
-                slidesPerView: 1,
-                slidesPerGroup: 1,
-            }
-        }
-    });
-
-
-    var swiper = new Swiper(".our-advantage__slider", {
-        //cssMode: true,
-        slidesPerView: 4,
-        //spaceBetween: 5,
-        slidesPerGroup: 1,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-
-        breakpoints: {
-            1200: {
-                speed: 800,
-                autoplay: {
-                    delay: 4500,
-                    disableOnInteraction: false,
-                },
-                slidesPerView: 4,
-            },
-            768: {
-                slidesPerView: 2,
-                slidesPerGroup: 1,
-            },
-            500: {
-                slidesPerView: 2,
-                slidesPerGroup: 1,
-            },
-            320: {
-                slidesPerView: 1,
-                slidesPerGroup: 1,
-            }
-        }
-    });
-
-    var swiper = new Swiper(".certificates__slider", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            type: "fraction",
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-
-
-    $('#button-more').click(function () {
-        $(".catalog .catalog__cards .catalog__cards--item").toggleClass('active_cards');
-        $(".catalog__equipment .catalog__cards .catalog__cards--item").toggleClass('active_cards');
-        $(".services .services__cards .services__cards--item").toggleClass('active_cards');
-
-        $(this).addClass('hidden');
-    });
-
-    $('#button-more__spare-1').click(function () {
-        $('.spare-parts .lift .spare-parts__content--item').toggleClass('active_cards');
-        $(this).addClass('hidden');
-    });
-
-    $('#button-more__spare-2').click(function () {
-        $('.spare-parts .eskalator .spare-parts__content--item').toggleClass('active_cards');
-        $(this).addClass('hidden');
-    })
-
-
-    $('.btn-add-1').on('click', function () {
-        $('form .form-input input.hidden').removeClass('hidden');
-        $(this).addClass('hidden');
-        $('.btn-add-2').removeClass('hidden');
-    });
-
-    $('.btn-add-2').on('click', function () {
-        $('form .form-input input.hidden_2').removeClass('hidden_2');
-        $(this).addClass('hidden');
-    });
-
 
 
 });
 
+
+const tabs = document.querySelector(".tabs__content");
+const tabButton = document.querySelectorAll(".tab-button");
+const contents = document.querySelectorAll(".content");
+
+tabs.onclick = e => {
+    const id = e.target.dataset.id;
+    if (id) {
+        tabButton.forEach(btn => {
+            btn.classList.remove("active");
+        });
+        e.target.classList.add("active");
+
+        contents.forEach(content => {
+            content.classList.remove("active");
+        });
+        const element = document.getElementById(id);
+        element.classList.add("active");
+    }
+}
 
 
 // Проверяем, можно ли использовать Webp формат
