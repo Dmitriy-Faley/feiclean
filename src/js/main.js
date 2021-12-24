@@ -2,19 +2,13 @@
 
 $(document).ready(function () {
 
-    $('.menu-btn').on('click', function (e) {
-        e.preventDefault;
-        $(this).toggleClass('menu-btn_active');
 
-        var $btn = $(".text-btn");
-        var text = $btn.text();
-        var label = $btn.data('label');
-        $btn.text(label).data('label', text);
-
-        $(this).toggleClass("active");
-        $(".overlay").toggleClass("open");
-        // this line ▼ prevents content scroll-behind
-        $("body").toggleClass("locked");
+    $(".bottom__menu a").on("click", function (e) {
+        e.preventDefault();
+        var anchor = $(this).attr('href');
+        $('html, body').stop().animate({
+            scrollTop: $(anchor).offset().top - 0
+        }, 800);
     });
 
 

@@ -66,46 +66,6 @@
                             <a href="#ex1" rel="modal:open" class="button button__mobile">Заказать</a>
                         </div>
                     </div>
-
-
-
-                    <!--  <div class="header__menu-btn">
-                        <a href="#" class="menu-btn menu-hide">
-                            <span></span>
-                        </a>
-
-                    </div> -->
-                    <div class="overlay">
-                        <div class="header__address">
-                            <img src="/assets/img/icons/location.svg" alt="location">
-                            <span>г. Минск ул. Ленина, 53</span>
-                        </div>
-                        <div class="header__mobile-menu">
-                            <nav class="bottom__menu" id="menu">
-                                <ul role="menu">
-                                    <li><a href="about-company.html">О компании</a></li>
-                                    <li><a href="equipment-parts-1.html">Оборудование</a></li>
-                                    <li><a href="spare-parts-1.html">Запасные части</a></li>
-                                    <li><a href="services.html">Услуги</a></li>
-                                    <li><a href="contacts.html">Контакты</a></li>
-                                </ul>
-                            </nav>
-                            <div class="header__button">
-                                <a href="#ex1" rel="modal:open" class="button">Заказать звонок</a>
-                            </div>
-                            <div class="header__phone">
-                                <div>
-                                    <img src="/assets/img/icons/mail.svg" alt="mail">
-                                    <a href="mailto:orona@mail.ru">orona@mail.ru</a>
-                                </div>
-                                <div>
-                                    <img src="/assets/img/icons/phone.svg" alt="phone">
-                                    <a href="tel:+37517354-81-04">+375 17 354-81-04</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -115,11 +75,11 @@
                 <div class="header__bottom--menu">
                     <nav class="bottom__menu">
                         <ul role="menu">
-                            <li><a href="about-company.html">Услуги</a></li>
-                            <li><a href="equipment-parts-1.html">Преимущества</a></li>
-                            <li><a href="spare-parts-1.html">Скидки</a></li>
-                            <li><a href="services.html">Отзывы</a></li>
-                            <li><a href="contacts.html">Контакты</a></li>
+                            <li><a href="#catalog">Услуги</a></li>
+                            <li><a href="#cleaning">Преимущества</a></li>
+                            <li><a href="#first-order">Скидки</a></li>
+                            <li><a href="#reviews">Отзывы</a></li>
+                            <li><a href="#contacts">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -131,8 +91,6 @@
     <section class="sale">
         <div class="sale__bg" style="background-image: url('/assets/img/home_bg.webp');"
             data-bg="/assets/img/home_bg.jpg" data-bg-webp="/assets/img/home_bg.webp"></div>
-        <div class="sale__bg__mobile" style="background-image: url('/assets/img/sale_bg_mobile.webp');"
-            data-bg="/assets/img/sale_bg_mobile.png" data-bg-webp="/assets/img/sale_bg_mobile.webp"></div>
         <div class="container">
             <div class="sale__content">
                 <div class="sale__text">
@@ -166,7 +124,7 @@
         </div>
     </div>
 
-    <div class="catalog">
+    <div class="catalog" id="catalog">
         <div class="container">
             <div class="spare-title">
                 <h2 class="title">Наши услуги</h2>
@@ -289,7 +247,7 @@
         </div>
     </div>
 
-    <section class="dry-cleaning">
+    <section class="dry-cleaning" id="cleaning">
         <div class="dry-cleaning__bg" style="background-image: url('/assets/img/him_bg.webp');"
             data-bg="/assets/img/him_bg.png" data-bg-webp="/assets/img/him_bg.webp"></div>
         <div class="container">
@@ -332,7 +290,7 @@
         </div>
     </section>
 
-    <section class="tabs">
+    <section class="tabs" id="tabs">
         <h2 class="title">Что входит в уборку?</h2>
         <div class="">
             <div class="tabs__content">
@@ -486,7 +444,7 @@
         </div>
     </section>
 
-    <section class="why-us">
+    <section class="why-us" id="why-us">
         <div class="container">
             <h2 class="title">Почему мы?</h2>
             <div class="why-us__content">
@@ -538,7 +496,7 @@
         </div>
     </section>
 
-    <section class="first-order">
+    <section class="first-order" id="first-order">
         <div class="first-order__bg" style="background-image: url('/assets/img/first_order.webp');"
             data-bg="/assets/img/first_order.jpg" data-bg-webp="/assets/img/first_order.webp"></div>
         <div class="first-order__form">
@@ -548,16 +506,56 @@
                 <form action="">
                     <input type="text" placeholder="Ваше имя">
                     <input type="text" placeholder="Какую услугу желаете заказать?">
-                    <input type="tel" placeholder="+375 (XX) XXX - XX - XX">
+                    <div class="input__tel">
+                        <div class="mask">+375</div>
+                        <input type="tel" placeholder="(XX) XXX - XX - XX">
+                    </div>
                     <button class="button">Заказать</button>
                 </form>
             </div>
         </div>
     </section>
 
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="title">Отзывы</h2>
+        </div>
+    </section>
 
 
-    <footer class="footer">
+    <section class="about-us">
+        <h2 class="title container">Клининговая компания “Феи Чистоты”</h2>
+        <div class="about-us__content">
+            <div class="item_1">
+                <picture>
+                    <source type="image/webp" srcset="/assets/img/about1.webp">
+                    <img src="/assets/img/about1.png" alt="">
+                </picture>
+                <div class="item__text">
+                    <p>Статья́ — это жанр журналистики, в котором автор ставит задачу проанализировать общественные
+                        ситуации, процессы, явления, прежде всего с точки зрения закономерностей, лежащих в их основе.
+                    </p>
+                    <p> Такому жанру как статья присуща ширина практических обобщений, глубокий анализ фактов и
+                        явлений, четкая социальная направленность[источник не указан 4459 дней]. В статье автор
+                        рассматривает отдельные ситуации как часть более широкого явления. Автор аргументированно
+                        пишет о своей точке зрения.
+                    </p>
+                    <p> В статье выражается развернутая обстоятельная аргументированная концепция автора или
+                        редакции по поводу актуальной социологической проблемы. Также в статье журналист обязательно
+                        должен интерпретировать факты (это могут быть цифры, дополнительная информация, которая
+                        будет правильно расставлять акценты и ярко раскрывать суть вопроса).
+                    </p>
+                    <p> Отличительным аспектом статьи является её готовность. Если подготавливаемый материал так и не
+                        был опубликован (не вышел в тираж, не получил распространения),
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer" id="contacts">
         <div class="container">
             <div class="footer__content_top">
                 <a href="/"><img src="/assets/img/logo_footer.png" class="footer__logo" alt="logo"></a>

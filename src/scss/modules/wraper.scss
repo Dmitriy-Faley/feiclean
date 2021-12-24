@@ -683,23 +683,51 @@
                     padding: 35px 0;
                     text-align: center;
                     font-size: 1.5rem;
+                    margin-bottom: 27px;
 
-                   &:not(:last-of-type){
-                       margin-bottom: 27px;
-                   }
-
-                    &::placeholder{
+                    &::placeholder {
                         color: #74727D;
                     }
                 }
 
-                .button{
+                .input__tel {
+                    position: relative;
+                    width: 100%;
+
+                    .mask {
+                        position: absolute;
+                        width: 107px;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: $blue-color;
+                        border-top-left-radius: 10px;
+                        border-bottom-left-radius: 10px;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 1.5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    input[type=tel] {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .button {
+                    width: auto;
                     margin-top: 3.75rem;
                     background: $blue-color;
+                    padding: 1.4rem 5.3rem;
                 }
             }
         }
     }
+}
+
+.reviews{
+    padding: 8.5rem 10rem;
 }
 
 
@@ -773,6 +801,28 @@
 
                 .button {
                     width: 100%;
+                }
+            }
+        }
+    }
+
+    .first-order {
+        min-height: 720px;
+
+        .first-order__form {
+            .form__data {
+                min-height: 720px;
+                width: 100%;
+                padding: 40px 28px 28px 28px;
+
+                form {
+                    input {
+                        margin-bottom: 20px;
+                    }
+
+                    .button {
+                        margin-top: 1.875rem;
+                    }
                 }
             }
         }
@@ -962,6 +1012,34 @@
             .content__info {
                 >div {
                     width: 100%;
+                }
+            }
+        }
+    }
+
+    .first-order {
+        .first-order__form {
+            .form__data {
+                .form__title {
+                    font-size: 1.875rem;
+                }
+
+                form {
+                    input {
+                        padding: 25px 0;
+                        font-size: 1.125rem;
+                    }
+
+                    .input__tel {
+                        .mask {
+                            font-size: 1.125rem;
+                            width: 70px;
+                        }
+                    }
+
+                    .button {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -1163,6 +1241,10 @@ form {
             padding: 20px;
         }
     }
+
+    .first-order .first-order__form .form__data {
+        padding: 30px 10px 10px;
+    }
 }
 
 
@@ -1253,11 +1335,6 @@ form {
                 font-size: 1rem;
                 max-width: inherit;
             }
-        }
-
-        .button {
-            font-size: 1rem;
-            width: 100%;
         }
     }
 }
