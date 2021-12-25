@@ -1,0 +1,103 @@
+.spare-parts {
+    padding-bottom: 8.5rem;
+
+    .button {
+        background: linear-gradient(0deg, #4C8A2D 0%, #7BE25D 100%);
+        color: $second-color;
+        width: 255px;
+
+        &:active {
+            background: linear-gradient(0deg, #4C8A2D 0%, #7BE25D 100%);
+        }
+
+        :focus {
+            background: linear-gradient(0deg, #4C8A2D 0%, #7BE25D 100%);
+        }
+    }
+
+    .spare-parts__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 43px;
+
+        .spare-parts__content--item {
+            position: relative;
+            width: auto;
+            //margin-bottom: 2.5rem;
+
+            .item__bg {
+                display: block;
+                filter: brightness(61%);
+                object-fit: cover;
+                border-radius: 7px;
+                width: 255px;
+                height: 255px;
+                transition: 2.5s ease-in-out;
+            }
+
+            .item__arrow {
+                position: absolute;
+                top: 7%;
+                right: 7%;
+            }
+
+            .item__title {
+                position: absolute;
+                //inset: 0;
+                bottom: 10px;
+                padding: 0 20px;
+                color: $second-color;
+                line-height: 1rem;
+            }
+
+            &:hover .item__bg {
+                filter: drop-shadow(2px 4px 6px black);
+            }
+        }
+    }
+
+    .button-more {
+        padding: 2.1rem 0 0;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .spare-parts {
+        .spare-parts__content {
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .spare-parts {
+        .spare-title {
+            .title {
+                font-size: 34px;
+            }
+        }
+
+        .spare-parts__content {
+            .spare-parts__content--item {
+                display: none;
+
+                &:nth-child(-n+4) {
+                    display: block;
+                }
+
+                .item__bg {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .catalog .catalog__cards .catalog__cards--item .catalog__cards--item__button .catalog__button .label-stock {
+        font-size: 0.75rem;
+    }
+}
