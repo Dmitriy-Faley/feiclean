@@ -255,33 +255,13 @@ section,
 @media screen and (max-width: 960px) {}
 
 /* 481 - 768 px */
-@media screen and (max-width: 768px) {
-    .titles-text {
-        .title-transparent {
-            bottom: 51px;
-        }
-
-        .title {
-            font-size: 42px;
-            line-height: 45px;
-        }
-    }
-
-    
-}
+@media screen and (max-width: 768px) {}
 
 /* 320 - 480 px */
 @media screen and (max-width: 480px) {
-    .titles-text {
-        .title {
-            font-size: 38px;
-        }
-    }
-
-    .spare-title {
-        .title {
-            font-size: 30px;
-        }
+    .title {
+        font-size: 36px;
+        line-height: 42px;
     }
 
     .button {
