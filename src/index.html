@@ -100,7 +100,7 @@
                         <h2 class="sale__title">Чистый дом -<br>это счастливый дом</h2>
                         <p class="sale__desk">Предоставляем услуги по уборке качественно, профессионально и с гарантией
                             чистоты!</p>
-                        <a href="#" class="button">Заказать уборку</a>
+                        <a href="#ex1" rel="modal:open" class="button">Заказать уборку</a>
                     </div>
                 </div>
             </div>
@@ -682,31 +682,15 @@
     <div id="ex1" class="modal">
         <div class="modal-content">
             <div class="modal-form">
-                <form method="post" class="">
-                    <h2 class="title">Получить консультацию</h2>
-                    <div class="form-input">
-                        <input type="text" name="name" placeholder="Контактное лицо" required minlength="2">
-                        <input type="tel" name="phone" placeholder="Телефон" required>
-                        <input type="email" name="mail" placeholder="Электронная почта">
-                        <textarea name="message" id="message" placeholder="Сообщение"></textarea>
-                        <div class="input__checkbox">
-                            <input type="checkbox" name="accept" id="accept" class="checkbox">
-                            <label for="accept">Даю согласие на обработку персональных данных</label>
-                        </div>
-                        <div class="input__wrapper">
-                            <span class="input__label">Загрузить фото/файл</span>
-                            <input name="file" type="file" id="input__file" class="input input__file" multiple>
-                            <label for="input__file" class="input__file-button">
-                                <span class="input__file-button-text">Загрузить файл</span>
-                            </label>
-                        </div>
-
-                    </div>
+                <form method="post" class="form">
+                    <h2 class="title">Заказать</h2>
+                    <input type="text" name="name" placeholder="Ваше имя" required minlength="2">
+                    <input type="tel" name="phone" placeholder="Ваш номер" required>
                     <button class="button">Отправить заявку</button>
                 </form>
             </div>
         </div><!-- content -->
-        <a href="#" rel="modal:close">Close</a>
+        <a href="#" rel="modal:close" style="color: #fff;">Close</a>
     </div>
 
 

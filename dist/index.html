@@ -91,6 +91,8 @@
     <section class="sale">
         <div class="sale__bg" style="background-image: url('/assets/img/home_bg.webp');"
             data-bg="/assets/img/home_bg.jpg" data-bg-webp="/assets/img/home_bg.webp"></div>
+        <div class="sale__bg__mobile" style="background-image: url('/assets/img/home_bg_mobile.webp');"
+            data-bg="/assets/img/home_bg.jpg" data-bg-webp="/assets/img/home_bg_mobile.webp"></div>
         <div class="container">
             <div class="sale__content">
                 <div class="sale__text">
@@ -98,7 +100,7 @@
                         <h2 class="sale__title">Чистый дом -<br>это счастливый дом</h2>
                         <p class="sale__desk">Предоставляем услуги по уборке качественно, профессионально и с гарантией
                             чистоты!</p>
-                        <a href="#" class="button">Заказать уборку</a>
+                        <a href="#ex1" rel="modal:open" class="button">Заказать уборку</a>
                     </div>
                 </div>
             </div>
@@ -526,7 +528,7 @@
     <section class="about-us">
         <h2 class="title container">Клининговая компания “Феи Чистоты”</h2>
         <div class="about-us__content">
-            <div class="item_1">
+            <div class="item item_1">
                 <picture>
                     <source type="image/webp" srcset="/assets/img/about1.webp">
                     <img src="/assets/img/about1.png" alt="">
@@ -548,6 +550,66 @@
                     <p> Отличительным аспектом статьи является её готовность. Если подготавливаемый материал так и не
                         был опубликован (не вышел в тираж, не получил распространения),
                     </p>
+                </div>
+            </div>
+            <div class="item item_2">
+                <picture>
+                    <source type="image/webp" srcset="/assets/img/about2.webp">
+                    <img src="/assets/img/about2.png" alt="">
+                </picture>
+                <div class="item__text">
+                    <h3 class="item__title">Клининговая компания “Феи Чистоты”</h3>
+                    <p>Статья́ — это жанр журналистики, в котором автор ставит задачу проанализировать общественные
+                        ситуации, процессы, явления, прежде всего с точки зрения закономерностей, лежащих в их основе.
+                    </p>
+                    <ul>
+                        <li>Статья́ — это жанр журналистики, в котором автор ставит задачу п</li>
+                        <li>Статья́ — это жанр журналистики, в котором автор ставит задачу проанализировать общественные
+                            ситуации, процессы, явления, прежде всего с точки зрения закономерностей, лежащих в их
+                            основе.</li>
+                    </ul>
+                    <ul>
+                        <li>Статья́ — это жанр журналистики, в котором автор ставит задачу проанализировать общественные
+                            ситуации, процессы, явления, прежде всего с точки зрения закономерностей, лежащих в их
+                            основе.
+                        </li>
+                        <li>Закономерностей, лежащих в их основе.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item item_3">
+                <picture>
+                    <source type="image/webp" srcset="/assets/img/about3.webp">
+                    <img src="/assets/img/about3.png" alt="">
+                </picture>
+                <div class="item__text">
+                    <h3 class="item__title">Клининговая компания “Феи Чистоты”</h3>
+                    <p>Статья́ — это жанр журналистики, в котором автор ставит задачу проанализировать общественные
+                        ситуации, процессы, явления, прежде всего с точки зрения закономерностей, лежащих в их основе.
+                        Такому жанру как статья присуща ширина практических обобщений, глубокий анализ фактов и явлений,
+                        четкая социальная направленность[источник не указан 4459 дней]. В статье автор рассматривает
+                        отдельные ситуации как часть более широкого явления. Автор аргументированно пишет о своей точке
+                        зрения.
+                        В статье выражается развернутая обстоятельная аргументированная концепция автора или редакции по
+                        поводу актуальной социологической проблемы. Также в статье журналист обязательно должен
+                        интерпретировать факты (это могут быть цифры, дополнительная информация, которая будет правильно
+                        расставлять акценты и ярко раскрывать суть вопроса).
+                        Отличительным аспектом статьи является её готовность. Если подготавливаемый
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="author">
+            <div class="container">
+                <div class="author__text">
+                    Автор аргументированно пишет о своей точке зрения. <br>
+                    В статье выражается развернутая обстоятельная аргументированная концепция автора или редакции по
+                    поводу
+                    актуальной социологической проблемы. Также в статье журналист обязательно должен интерпретировать
+                    факты
+                    (это могут быть цифры, дополнительная информация, которая будет правильно расставлять акценты и ярко
+                    раскрывать суть вопроса).
                 </div>
             </div>
         </div>
@@ -620,31 +682,15 @@
     <div id="ex1" class="modal">
         <div class="modal-content">
             <div class="modal-form">
-                <form method="post" class="">
-                    <h2 class="title">Получить консультацию</h2>
-                    <div class="form-input">
-                        <input type="text" name="name" placeholder="Контактное лицо" required minlength="2">
-                        <input type="tel" name="phone" placeholder="Телефон" required>
-                        <input type="email" name="mail" placeholder="Электронная почта">
-                        <textarea name="message" id="message" placeholder="Сообщение"></textarea>
-                        <div class="input__checkbox">
-                            <input type="checkbox" name="accept" id="accept" class="checkbox">
-                            <label for="accept">Даю согласие на обработку персональных данных</label>
-                        </div>
-                        <div class="input__wrapper">
-                            <span class="input__label">Загрузить фото/файл</span>
-                            <input name="file" type="file" id="input__file" class="input input__file" multiple>
-                            <label for="input__file" class="input__file-button">
-                                <span class="input__file-button-text">Загрузить файл</span>
-                            </label>
-                        </div>
-
-                    </div>
+                <form method="post" class="form">
+                    <h2 class="title">Заказать</h2>
+                    <input type="text" name="name" placeholder="Ваше имя" required minlength="2">
+                    <input type="tel" name="phone" placeholder="Ваш номер" required>
                     <button class="button">Отправить заявку</button>
                 </form>
             </div>
         </div><!-- content -->
-        <a href="#" rel="modal:close">Close</a>
+        <a href="#" rel="modal:close" style="color: #fff;">Close</a>
     </div>
 
 

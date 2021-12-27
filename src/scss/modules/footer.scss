@@ -91,7 +91,6 @@
                 >div {
                     &:first-child {
                         padding: 0;
-                        align-items: flex-start;
                         margin-bottom: 0.875rem;
                     }
                 }
@@ -99,8 +98,10 @@
         }
 
         .footer__content_bottom {
+            padding-bottom: 0;
             .rating {
                 flex-direction: column;
+                align-items: flex-start;
                 gap: 0px;
             }
 

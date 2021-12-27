@@ -109,46 +109,6 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             hash: false,
-            template: `${PATHS.src}/spare-parts-1.html`,
-            filename: './spare-parts-1.html'
-        }),
-        new HtmlWebpackPlugin({
-            hash: false,
-            template: `${PATHS.src}/spare-parts-2.html`,
-            filename: './spare-parts-2.html'
-        }),
-        new HtmlWebpackPlugin({
-            hash: false,
-            template: `${PATHS.src}/spare-parts-3.html`,
-            filename: './spare-parts-3.html'
-        }),
-        new HtmlWebpackPlugin({
-            hash: false,
-            template: `${PATHS.src}/contacts.html`,
-            filename: './contacts.html'
-        }),
-        new HtmlWebpackPlugin({
-            hash: false,
-            template: `${PATHS.src}/about-company.html`,
-            filename: './about-company.html'
-        }),
-        new HtmlWebpackPlugin({
-            hash: false,
-            template: `${PATHS.src}/equipment-parts-1.html`,
-            filename: './equipment-parts-1.html'
-        }),
-        new HtmlWebpackPlugin({
-            hash: false,
-            template: `${PATHS.src}/equipment-parts-2.html`,
-            filename: './equipment-parts-2.html'
-        }),
-        new HtmlWebpackPlugin({
-            hash: false,
-            template: `${PATHS.src}/services-2.html`,
-            filename: './services-2.html'
-        }),
-        new HtmlWebpackPlugin({
-            hash: false,
             template: `${PATHS.src}/services.html`,
             filename: './services.html'
         }),
