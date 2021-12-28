@@ -147,7 +147,7 @@
                         <span>от 40 BYN</span>
                     </div>
                     <div class="catalog__cards--item__button">
-                        <a href="#ex2_2" rel="modal:open" class="button-order">Заказать</a>
+                        <a href="services.html" class="button-order">Заказать</a>
                     </div>
                 </div>
                 <div class="catalog__cards--item">
@@ -698,13 +698,32 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" referrerpolicy="no-referrer">
     </script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- jQuery Modal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
     <script>
+        const tabs = document.querySelector(".tabs__content");
+        const tabButton = document.querySelectorAll(".tab-button");
+        const contents = document.querySelectorAll(".content");
+
+        tabs.onclick = e => {
+            const id = e.target.dataset.id;
+            if (id) {
+                tabButton.forEach(btn => {
+                    btn.classList.remove("active");
+                });
+                e.target.classList.add("active");
+
+                contents.forEach(content => {
+                    content.classList.remove("active");
+                });
+                const element = document.getElementById(id);
+                element.classList.add("active");
+            }
+        }
+
         $(document).ready(function () {
             $("input[type='tel']").mask("+375 (99) 999-99-99");
         });

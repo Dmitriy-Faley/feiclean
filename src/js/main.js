@@ -1,8 +1,4 @@
-//import Swiper from 'swiper';
-
 $(document).ready(function () {
-
-
     $(".bottom__menu a").on("click", function (e) {
         e.preventDefault();
         var anchor = $(this).attr('href');
@@ -10,84 +6,7 @@ $(document).ready(function () {
             scrollTop: $(anchor).offset().top - 0
         }, 800);
     });
-
-
-    var modal1 = $('.modal-overlay-1, .modal-1');
-    var modal2 = $('.modal-overlay-2, .modal-2');
-
-    $('.btn-modal-1').click(function () {
-        modal1.addClass('active');
-        $("body").addClass("locked");
-    });
-
-    $('.btn-modal-2').click(function () {
-        modal2.addClass('active');
-        $("body").addClass("locked");
-    });
-
-    $('.close-modal-1').click(function () {
-        modal1.removeClass('active');
-        $("body").removeClass("locked");
-    });
-    $('.close-modal-2').click(function () {
-        modal2.removeClass('active');
-        $("body").removeClass("locked");
-    });
-
-
-    $('.modal-overlay-1').click(function (e) {
-        var container = $(".modal-overlay-1");
-        if (container.has(e.target).length === 0) {
-            modal1.removeClass('active');
-            $("body").removeClass("locked");
-        }
-    });
-
-    $('.modal-overlay-2').click(function (e) {
-        var container2 = $(".modal-overlay-2");
-        if (container2.has(e.target).length === 0) {
-            modal2.removeClass('active');
-            $("body").removeClass("locked");
-        }
-    });
-
-    $(document).on('keydown', function (e) {
-        if (e.keyCode == 27) {
-            modal1.removeClass('active');
-            $("body").removeClass("locked");
-        }
-
-        if (e.keyCode == 27) {
-            modal2.removeClass('active');
-            $("body").removeClass("locked");
-        }
-
-    });
-
-
-
 });
-
-
-const tabs = document.querySelector(".tabs__content");
-const tabButton = document.querySelectorAll(".tab-button");
-const contents = document.querySelectorAll(".content");
-
-tabs.onclick = e => {
-    const id = e.target.dataset.id;
-    if (id) {
-        tabButton.forEach(btn => {
-            btn.classList.remove("active");
-        });
-        e.target.classList.add("active");
-
-        contents.forEach(content => {
-            content.classList.remove("active");
-        });
-        const element = document.getElementById(id);
-        element.classList.add("active");
-    }
-}
 
 
 // Проверяем, можно ли использовать Webp формат

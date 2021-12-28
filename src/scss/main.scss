@@ -6,10 +6,6 @@
 @import "modules/header";
 @import "modules/footer";
 @import "modules/wraper";
-@import "modules/spare-parts.scss";
-@import "modules/contacts.scss";
-@import "modules/about-company.scss";
-@import "modules/equipment-parts.scss";
 @import "modules/services.scss";
 
 
@@ -162,10 +158,6 @@ section,
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     text-align: center;
-
-    &:hover {
-        box-shadow: 0 0 10px 1px #7BE25D;
-    }
 
     &:active {
         background: #5A9D2C;

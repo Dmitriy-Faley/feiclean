@@ -134,7 +134,7 @@
                 color: $second-color;
                 overflow: hidden;
 
-                /*  &::before {
+                 &::before {
                     content: '';
                     position: absolute;
                     top: 0;
@@ -142,21 +142,22 @@
                     width: 100%;
                     height: 100%;
                     //background: linear-gradient(to left, #1366ff, #ff0b6d);
-                    background: linear-gradient(to left, #58a15e, #023f00);
+                    background: linear-gradient(to left, #003343, #00c3ff);
                     z-index: -1;
                     transform: scaleX(0);
                     transform-origin: right;
                     transition: transform .5s ease-in-out;
-                } */
+                }
 
-                /*   &:hover::before {
+                  &:hover::before {
                     transform: scaleX(1);
                     transform-origin: left;
-                } */
+                }
                 &:hover {
                     background: linear-gradient(0deg, #4c8a2d, #7be25d);
                     color: $second-color;
                     box-shadow: none;
+                    border-color: $blue-color;
                 }
             }
 
@@ -231,27 +232,6 @@
     }
 }
 
-.button-container-1 {
-    position: relative;
-    transition: 0.5s;
-    letter-spacing: 1px;
-    border-radius: 8px;
-
-    button {
-        width: 445px;
-        height: 75px;
-
-        @include button(linear-gradient(92.09deg, #0B62E9 1.77%, #123E93 100%), "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png", 2300%, 100%, none, #fff);
-        cursor: pointer;
-        -webkit-animation: ani2 0.7s steps(22) forwards;
-        animation: ani2 0.7s steps(22) forwards;
-
-        &:hover {
-            -webkit-animation: ani 0.7s steps(22) forwards;
-            animation: ani 0.7s steps(22) forwards;
-        }
-    }
-}
 
 
 .mas {
@@ -365,8 +345,6 @@
             }
         }
 
-
-
         .header__bottom {
             .header__bottom--menu {
                 .bottom__menu {
@@ -382,11 +360,6 @@
         }
     }
 
-    .button-container-1 {
-        button {
-            width: auto;
-        }
-    }
 }
 
 /* 320 - 480 px */
