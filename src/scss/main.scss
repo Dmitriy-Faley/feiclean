@@ -43,6 +43,29 @@ body {
     height: 100%;
 }
 
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $green-color #fff;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $green-color;
+    border-radius: 20px;
+    border: 3px solid #fff;
+}
+
+
 *,
 *:before,
 *:after {
@@ -105,7 +128,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     border-bottom: 1px solid $green-color;
-    -webkit-text-fill-color: $second-color;
+    -webkit-text-fill-color: $default-color;
     -webkit-box-shadow: 0 0 0px 0px #000 inset;
     transition: background-color 5000s ease-in-out 0s;
 }

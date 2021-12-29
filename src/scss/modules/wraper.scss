@@ -877,6 +877,33 @@
             align-items: center;
 
             .form__input {
+                padding: 15px 15px 15px;
+
+                input {
+                    width: 350px;
+                }
+
+                .button {
+                    //width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .sale {
+        .sale__text {
+            height: auto;
+            width: auto;
+        }
+    }
+
+    .form__order {
+        form {
+            align-items: center;
+
+            .form__input {
                 flex-direction: column;
 
                 input {
@@ -892,16 +919,7 @@
     }
 
     .catalog {
-        margin-top: 20rem;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .sale {
-        .sale__text {
-            height: auto;
-            width: auto;
-        }
+        padding-top: 20rem;
     }
 
 }
@@ -913,11 +931,11 @@
             .form__input {
 
                 input {
-                    width: 100%;
+                    width: 100% !important;
                 }
 
                 .button {
-                    width: 100%;
+                    width: 100% !important;
                 }
             }
         }

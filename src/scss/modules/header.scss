@@ -35,35 +35,6 @@
         align-items: center;
         justify-content: space-between;
         padding: 1rem 0 0.3rem 0;
-        /* letter-spacing: 0.03rem; */
-
-        .header__address {
-            color: $second-color;
-            display: flex;
-            align-items: center;
-
-            span {
-                margin-left: 0.93rem;
-                letter-spacing: 0.03em;
-            }
-        }
-
-        .header__phone-short {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-
-            span {
-                font-size: 0.8571rem;
-                color: $default-color;
-            }
-
-            a {
-                font-size: 1.8571rem;
-                font-weight: 600;
-                color: $default-color;
-            }
-        }
 
         .header__phone {
             display: flex;
@@ -79,6 +50,12 @@
                 align-items: center;
                 justify-content: space-between;
 
+                >div:first-child {
+                    display: flex;
+                    align-items: center;
+                    line-height: initial;
+                }
+
                 .phone-icon {
                     width: 25px;
                 }
@@ -88,14 +65,15 @@
                     font-family: 'Roboto', sans-serif;
                     font-size: 1.375rem;
                     font-weight: 500;
-                    padding-left: 10px;
+                    padding-left: 5px;
                 }
 
                 .social {
                     padding-left: 13px;
+                    line-height: initial;
 
                     img {
-                        width: 20px;
+                        width: 25px;
                     }
                 }
             }
@@ -134,7 +112,7 @@
                 color: $second-color;
                 overflow: hidden;
 
-                 &::before {
+                &::before {
                     content: '';
                     position: absolute;
                     top: 0;
@@ -149,10 +127,11 @@
                     transition: transform .5s ease-in-out;
                 }
 
-                  &:hover::before {
+                &:hover::before {
                     transform: scaleX(1);
                     transform-origin: left;
                 }
+
                 &:hover {
                     background: linear-gradient(0deg, #4c8a2d, #7be25d);
                     color: $second-color;
@@ -163,12 +142,14 @@
 
             .button__mobile {
                 display: none;
+                line-height: initial;
+                letter-spacing: 0;
             }
         }
 
     }
 
-   
+
 
     .header__bottom {
         background-color: $blue-color;
@@ -366,6 +347,8 @@
 @media screen and (max-width: 480px) {
     .header {
         .header__menu {
+            align-items: flex-start;
+            padding: 0.5rem 0 0.5rem;
 
             .header__logo {
                 width: 111px;
@@ -380,11 +363,11 @@
                     line-height: 15px;
 
                     .tel {
-                        font-size: 13px;
+                        font-size: 12px;
                     }
 
                     .social img {
-                        width: 14px;
+                        width: 25px;
                     }
                 }
             }
@@ -392,7 +375,8 @@
             .header__button {
                 .button__mobile {
                     font-size: 12px;
-                    padding: 0 10px;
+                    font-weight: 400;
+                    padding: 6px 10px;
                 }
             }
         }
@@ -429,6 +413,9 @@
                 .button__mobile {
                     display: none;
                 }
+            }
+            .header__phone .phone__info .tel{
+                font-size: 14px;
             }
         }
 
