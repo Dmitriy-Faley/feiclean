@@ -113,30 +113,20 @@
                 overflow: hidden;
 
                 &::before {
-                    content: '';
+                    content: "";
+                    background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.5));
+                    height: 85px;
+                    width: 50px;
                     position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    //background: linear-gradient(to left, #1366ff, #ff0b6d);
-                    background: linear-gradient(to left, #003343, #00c3ff);
-                    z-index: -1;
-                    transform: scaleX(0);
-                    transform-origin: right;
-                    transition: transform .5s ease-in-out;
+                    top: -8px;
+                    left: -82px;
+
+                    transform: skewX(-45deg);
                 }
 
                 &:hover::before {
-                    transform: scaleX(1);
-                    transform-origin: left;
-                }
-
-                &:hover {
-                    background: linear-gradient(0deg, #4c8a2d, #7be25d);
-                    color: $second-color;
-                    box-shadow: none;
-                    border-color: $blue-color;
+                    left: 332px;
+                    transition: 1.2s ease;
                 }
             }
 
@@ -414,7 +404,8 @@
                     display: none;
                 }
             }
-            .header__phone .phone__info .tel{
+
+            .header__phone .phone__info .tel {
                 font-size: 14px;
             }
         }

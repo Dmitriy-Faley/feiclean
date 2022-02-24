@@ -15,7 +15,7 @@
         line-height: initial;
     }
 
-    p {
+    .service__text {
         font-family: 'Roboto', sans-serif;
         font-size: 1.875rem;
         font-weight: 500;
@@ -23,6 +23,16 @@
         line-height: 35px;
         border: 3px solid #74727D;
         padding: 65px 33px 75px 58px;
+
+        ul,ol {
+            list-style-type: inherit;
+
+            li {
+                margin-left: 20px;
+                padding: 10px 0;
+                list-style-type: inherit;
+            }
+        }
     }
 }
 
